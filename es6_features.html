@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ES6 Features</title>
+</head>
+<body>
+    <script>
+       
+       //Rest Parameters
+       function displayNames(value,value1,...names){
+           return names
+       }
+    //   console.log(displayNames('John','Peter'))
+
+       //Spread Operator
+       function addValues(num1,num2,num3){
+           return  num1+num2+num3
+       }
+       let numbers=[10,20,30,40]
+     //  console.log(addValues(...numbers));
+
+       var fruits=['apple','orange','grapes']
+       var fruits1=['mango','pineapple']
+       var newFruits=[...fruits,'banana',...fruits1]
+       console.log(newFruits);
+       
+       // Destructuring
+       // a) Assignment destructuring, b) object destructuring
+
+       var fruits2=['apple','orange','grapes']
+       let [a,b,c]=fruits2
+       console.log(a);
+       console.log(b);
+       console.log(c);
+
+       var car={
+           brand:"Audi",
+           color:"White",
+           price:7000000
+       }
+
+       let {brand,color,price}=car
+       console.log(brand);
+       console.log(color);
+       console.log(price);
+        
+    </script>
+</body>
+</html>
