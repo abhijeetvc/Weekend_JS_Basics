@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Promises</title>
+</head>
+<body>
+    <script>
+        //Promise: a) Pending, b) Fulfilled, c)Rejected
+
+        var isActive=true
+
+        //create promise
+        var getEmployeeInfo=new Promise(
+            function(resolve,reject){
+                if(isActive){
+                    var employee={
+                        name:"Peter",
+                        city:"Pune",
+                        salary:750000
+                    }
+                    resolve(employee)
+                }else{
+                    var reason=new Error('Employee is not active')
+                    reject(reason)
+                }
+            }
+        )
+
+            // call promise
+        var check=function(){
+            console.log("Hiiiiiiiiiii");  
+                getEmployeeInfo
+                    .then((fulfilled)=>console.log(fulfilled))
+                    .catch((error)=>console.log(error.message))
+            console.log("Hellooooooooo");
+                    
+        }
+
+        check()
+    </script>
+</body>
+</html>

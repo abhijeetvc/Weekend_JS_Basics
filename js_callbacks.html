@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Callbacks</title>
+</head>
+<body>
+    <script>
+        function demo(a, func){
+            console.log(a);  // 10
+            func()
+        }
+        function test(){
+            console.log('This is a callback function');
+        }
+      //  demo(10,test)
+
+        function check(name,func){
+            console.log('In check...');
+            func(name)           
+        }
+        
+        function check1(name){
+            console.log(`Hi ${name}`);           
+        }
+        setTimeout(check,1000,'Peter',check1)
+      //  check1('John')
+
+    </script>
+</body>
+</html>

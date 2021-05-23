@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Closures</title>
+</head>
+<body>
+    <script>
+        var a=10
+        function display(){
+            var b=20
+            console.log(a);
+
+            function innerFunction(){
+                console.log(b);                
+            }
+          //  innerFunction()
+          return innerFunction
+        }
+      const checkInnerFunc=display()
+    //  const checkInnerFunc=function(){
+    //     console.log(b); 
+    //  }
+       checkInnerFunc()
+   //     console.log(b);
+        
+    </script>
+</body>
+</html>
