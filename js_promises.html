@@ -27,13 +27,19 @@
         )
 
             // call promise
-        var check=function(){
+        // var check=function(){
+        //     console.log("Hiiiiiiiiiii");  
+        //         getEmployeeInfo
+        //             .then((fulfilled)=>console.log(fulfilled))
+        //             .catch((error)=>console.log(error.message))
+        //     console.log("Hellooooooooo");                
+        // }
+
+         async function check(){
             console.log("Hiiiiiiiiiii");  
-                getEmployeeInfo
-                    .then((fulfilled)=>console.log(fulfilled))
-                    .catch((error)=>console.log(error.message))
-            console.log("Hellooooooooo");
-                    
+            let employee=await getEmployeeInfo
+            console.log(employee);
+            console.log("Hellooooooooo");                
         }
 
         check()

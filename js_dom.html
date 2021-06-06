@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS DOM</title>
+</head>
+<body>
+    <h1>Heading</h1>
+    <p class="pclass">This is a paragraph.</p>
+    <p id="pid" class="pclass"></p>
+    <input type="text" id="firstName">
+    <button type="button" onclick="showData()">Show</button>
+    <script>
+        function showData(){
+           // document.getElementById("pid").innerHTML="This is a new Paragraph"
+           // document.getElementById("pid").style.background="yellowgreen"
+
+            var firstName=document.getElementById("firstName").value
+            document.getElementById("pid").innerHTML="FirstName is: "+firstName
+           var pTags=document.getElementsByClassName("pclass")
+           for(var tag of pTags){
+               tag.style.background="yellowgreen"
+           }
+
+           var pTag=document.createElement("p")
+           var textNode=document.createTextNode("This is again a new Paragraph.")
+
+           pTag.appendChild(textNode)
+           document.body.appendChild(pTag)
+        }
+    </script>
+</body>
+</html>
